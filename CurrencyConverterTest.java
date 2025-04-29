@@ -28,5 +28,9 @@ class CurrencyConverterTest {
         assertTrue(converter.isValid(50.0, 1.5));
         assertFalse(converter.isValid(-10.0, 1.5));
         assertFalse(converter.isValid(100.0, 0.0));
+        assertTrue(converter.isValid(50.0, 1.5));     
+        assertFalse(converter.isValid(-0.01, 5.0));   
+        assertFalse(converter.isValid(100.0, 0.0));
+        assertFalse(converter.isValid(-10.0, -2.5));
     }
 }
