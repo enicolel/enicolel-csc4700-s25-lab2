@@ -5,4 +5,7 @@ public class CurrencyConverter {
         return amount * rate;
     }
 
+    public boolean isValid(double amount, double rate) {
+        return amount >= 0 && rate > 0;
+    }
 }
