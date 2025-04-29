@@ -21,5 +21,12 @@ class CurrencyConverterTest {
         assertEquals(expected, actual, 0.001);
     }
 
+    @Test
+    void testIsValid() {
+        CurrencyConverter converter = new CurrencyConverter();
 
+        assertTrue(converter.isValid(50.0, 1.5));
+        assertFalse(converter.isValid(-10.0, 1.5));
+        assertFalse(converter.isValid(100.0, 0.0));
+    }
 }
